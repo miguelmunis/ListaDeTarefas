@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
     <script src="https://kit.fontawesome.com/8f682f19ac.js" crossorigin="anonymous"></script>
     <script src="/js/addItems.js"></script>
@@ -15,15 +17,24 @@
         <div class="bloco-tarefa">
             <div class="adicionarTarefa">
                 <input type="text" placeholder="Adicionar nova tarefa." id="adicionar" oninput="validadeTask()">
-                
-                <input type="button" value="+" id="botaoAdicionar" onclick="addItems()">  
+
+                <input type="button" value="+" id="botaoAdicionar" onclick="addItems()">
+                <p id="filtrar" onclick="showData()">Filtrar </p>
+                <div id="blocoFiltrar">
+                    <input type="date" name="data" id="dataInicio">
+                    <input type="date" name="data" id="dataFinal">
+                </div>
+                <input id="button" type="button" value="Pesquisar" onclick="esconderBotoes()">
+
                 <span id="span">Digite ao menos uma palavra</span>
+
             </div>
         </div>
 
-            <div id="tarefasAdicionadas">
-                <p id="tasksToDo">Suas Tarefas</p>
-            </div>
-    </section>       
+        <div id="tarefasAdicionadas">
+            <p id="tasksToDo">Suas Tarefas</p>
+        </div>
+    </section>
 </body>
+
 </html>
